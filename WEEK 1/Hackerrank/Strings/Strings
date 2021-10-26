@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string stra,strb;
+    char a,b;
+    cin>>stra>>strb;
+    cout<<stra.size()<<" "<<strb.size()<<endl<<stra+strb<<endl;
+    a = strb[0];
+    b = stra[0];        
+    stra[0] = a;
+    strb[0] = b;
+    cout<<stra<<" "<<strb;
+	// Complete the program
+  
+    return 0;
+}
