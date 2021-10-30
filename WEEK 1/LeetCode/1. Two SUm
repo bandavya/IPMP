@@ -1,0 +1,40 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int x = 0,y=0;
+        for(int i=0;i<nums.size()-1;i++){
+            for(int j=i+1;j<nums.size();j++){
+                if(nums[i]+nums[j]==target){
+                    x=i;
+                    y=j;
+                }
+            }
+        }
+        return {x,y};
+        
+    }
+};
+
+
+//Second solution
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int x=0;
+        std::vector<int>::iterator y;
+        for (int i=1; i<nums.size(); i++){
+            int ser = target - nums[x];
+            y = std::find (nums.begin()+i, nums.end(), ser);
+            if (y != nums.end())
+            {
+                int z = int (y - nums.begin()); 
+                return {x,z};
+    
+            }
+            else
+                x++;
+
+            }
+        return {0};
+    }
+};
