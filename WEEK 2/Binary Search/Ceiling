@@ -1,4 +1,4 @@
-int ceilSearch(int arr[], int low, int high, int x)
+int ceil(int arr[], int low, int high, int x)
 {
      
     int i;
