@@ -1,0 +1,15 @@
+int floor(int arr[], int low, int high, int x)
+{
+     
+    int i;
+    if(x >= arr[high-1])
+        return high-1;
+    if (x < arr[0])
+        return -1;
+    for(i = low; i < high; i++)
+    {     
+        if(arr[i] > x)
+        return i-1;
+    }    
+    return -1;
+}
