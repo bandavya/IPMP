@@ -1,0 +1,10 @@
+class Solution {
+public:
+    int numberOfArrays(vector<int>& differences, int lower, int upper) {
+        int maxd =*max_element(differences.begin(), differences.end()), mind = *min_element(differences.begin(), differences.end());
+        return max(0, (maxd - mind) - (upper - lower));
+    
+
+        
+    }
+};
