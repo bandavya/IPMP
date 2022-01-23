@@ -1,1 +1,24 @@
-ABC
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverseStr(string& str)
+{
+	int n = str.length();
+
+	for (int i = 0; i < n / 2; i++){
+	    int t = str [i];
+	    str[i] = str[n - i - 1];
+	    str[n - i - 1] = t;
+	    
+	}
+}
+
+int main()
+{
+	string str;
+	cout<<"Enter a string: ";
+	getline(cin, str);
+	reverseStr(str);
+	cout << str;
+	return 0;
+}
