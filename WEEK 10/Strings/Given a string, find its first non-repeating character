@@ -2,16 +2,24 @@
 using namespace std;
 void printDups(string str)
 {
+    int i, index = -1;
 	map<char, int> count;
 	for (int i = 0; i < str.length(); i++) {
 		count[str[i]]++;
 	}
-
-	for (auto it : count) {
-		if (it.second == 1)
-			cout <<it.first;
-			break;
+	for (int i = 0; i < str.length(); i++) {
+	    if (count[str[i]]== 1) {
+            index = i;
+            break;
+        }
 	}
+	if (index == -1)
+        cout << "Either all characters are repeating or "
+            "string is empty";
+    else
+        cout << "First non-repeating character is "<<
+            str[index];
+
 }
 int main()
 {
